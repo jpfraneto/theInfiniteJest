@@ -1,0 +1,282 @@
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    background-color: black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.headerBanner{
+    font-family: 'Fredoka One', cursive;
+    background-color: black;
+    color: white;
+    text-align: center;
+    flex: 0 1 auto;
+}
+
+#headerTitle {
+    color: rgb(76, 12, 150);
+    text-decoration: none;
+}
+
+#theFuture {
+    flex: 1 1 auto;
+    height: 100%;
+    color: white;
+    background-image: url("https://images.unsplash.com/photo-1462332420958-a05d1e002413?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1040&q=80");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 38px;
+}
+
+.footer {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(76, 12, 150);
+    position: fixed;
+    bottom: 0;
+}
+
+.footer a {
+    margin: 2%;
+    color: black;
+    text-decoration: none;
+    font-size: 101%;
+}
+
+.footer a:hover {
+    color: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+    text-shadow: 0 0 20px #0ae678
+}
+
+.navigationBar {
+    width : 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#systemDisplay {
+    flex: 1 0 auto;
+}
+
+.iFrameContainer {
+    position : relative;
+    padding-top : 56.25%; /* 16:9 */
+    overflow : hidden;
+}
+
+.iFrameContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    overflow : hidden;
+}
+
+.controls {
+    margin-top: 0.5em;
+}
+
+.column {
+    flex: 0 1 auto;
+    background-color: transparent;
+}
+
+.left {
+    text-align: center;
+    width:22%
+}
+
+.right {
+    text-align: center;
+    width:22%
+}
+
+.middle {
+    text-align: center;
+    width:54%
+}
+
+.navigationBar span {
+    font-size: 150%;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(177, 172, 172, 0.685)
+}
+
+.navigationBar span:hover {
+    text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navigationBar p {
+    margin-bottom: 0;
+}
+
+#presentRecommendationInformation{
+    color: white;
+    display: none;
+    margin: 16px auto 55px;
+    padding: 8px 0;
+    border: rgb(76, 12, 150) groove 6px;
+}
+
+.activeTense {
+    color: rgb(248, 239, 239) !important;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.table {
+    font-size: 0.8em;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#thePast {
+    display: none;
+    color:white;
+    margin: 16px auto 55px;
+    padding: 8px 0;
+    border: rgb(76, 12, 150) groove 6px;
+}
+
+#pastTable {
+    width: 100%;
+    font-size: 0.618em;
+    cursor: pointer;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    z-index: 1; /* Sit on top */
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: auto;
+    width: 100%; /* Full width */
+    height: 80vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    color: black;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 1% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    padding: 18px;
+    width: 55%; /* Could be more or less, depending on screen size */
+  }
+  
+  .closeModal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+.closeModal:hover,
+.closeModal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+th {
+    border-bottom:rgb(24, 71, 226) solid 2px;
+    margin-bottom: 3px;
+}
+
+#language {
+    width: 100%;
+}
+
+@media (max-width:777px){
+    .left {
+        text-align: center;
+        width:2%
+    }
+    
+    .right {
+        text-align: center;
+        width:2%
+    }
+    
+    .middle {
+        text-align: center;
+        width:96%
+    }
+
+    #headerTitle {
+        font-size: 80%;
+    }
+
+    .modal-content {
+        width: 88%; /* Could be more or less, depending on screen size */
+      }
+}
+
+label {
+    margin-top: 8px;
+    display: block;
+    text-align: left;
+    font-size: 0.8em;
+}
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+
+#footerMessage{
+    text-align: center;
+    margin: 0;
+    font-size: 88%;
+}
+
+#addRecommendationBtn {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+#addRecommendationBtn:hover {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0;
+}
