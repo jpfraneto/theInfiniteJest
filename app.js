@@ -52,8 +52,8 @@ if(process.env.NODE_ENV === 'production') {
 
 // seedDB();
 
-// console.log("The app.js file is running again.");
-// setTimeout(theSource.checkSystem);
+console.log("The app.js file is running again.");
+setTimeout(theSource.checkSystem);
 
 const sessionConfig = {
   secret: "Music to nourish your soul and activate your mind",
