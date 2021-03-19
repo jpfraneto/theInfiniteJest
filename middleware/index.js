@@ -93,7 +93,7 @@ middlewareObj.isUser = function(req, res, next){
 
 middlewareObj.sendVerificationEmail = async function (username, userEmail, verificationCode) {
     // const verificationUrl = "http://localhost:3000/verifyEmail/" + verificationCode;
-    const verificationUrl = "https://www.human-music.com/verifyEmail/" + verificationCode;
+    const verificationUrl = "https://www.theinfinitejest.tv/verifyEmail/" + verificationCode;
 
     const transporter = nodemailer.createTransport({
         host: 'mail.privateemail.com',
@@ -125,7 +125,7 @@ middlewareObj.sendVerificationEmail = async function (username, userEmail, verif
 }
 
 middlewareObj.sendResetEmail = async function (username, userEmail, resetCode) {
-    const verificationUrl = "https://www.human-music.com/password_reset/" + resetCode;
+    const verificationUrl = "https://www.theinfinitejest.tv/password_reset/" + resetCode;
     // const verificationUrl = "http://localhost:3000/password_reset/" + resetCode;
     
     const transporter = nodemailer.createTransport({
