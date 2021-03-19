@@ -1,0 +1,31 @@
+<%- include("./partials/header") %>
+
+<div class="box" id="systemDisplay">
+    <div class="column left"></div>
+    <div id="middleColumn" class="column middle text-center">
+      <p><strong>Login</strong></p>
+      <p>The password that you used does not match the one in the database. I really don't know yet how to help you get a new password so I 
+        hope that you are able to remember it. I'm working on this.
+      </p>
+      <p>If you want to create a new account, <a href="/register">click here.</a></p>
+
+      <form action="/login" method="POST">
+        <div class="row align-items-center">
+          <div class="col-12" style="margin-bottom: 16px;">
+            <label for="loginUsername" class="clock">Username</label>
+            <input type="text" name="username" placeholder="Username" id="loginUsername" required>
+            <label for="loginPassword" class="clock">Password</label>
+            <input type="password" name="password" placeholder="Password" id="loginPassword" required>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-success" style="margin-top: 8px">Login</button>
+            <a href="/" class="btn btn-primary" style="margin-top: 8px">Back</a>
+          </div>
+        </div>
+      </form>
+        
+    </div>
+    <div class="column right"></div>
+</div>
+
+<%- include("./partials/footer") %>

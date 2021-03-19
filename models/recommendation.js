@@ -3,11 +3,14 @@ var mongoose = require("mongoose");
 var recommendationSchema = new mongoose.Schema({
     index : Number,
     author: {
-        name: String,
+        id: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User"
+        },
         username: String,
         country: String,
-        language: String,
-        email: String
+        name: String,
+        language: String
     },
     name: String,
     reviewed: Boolean,

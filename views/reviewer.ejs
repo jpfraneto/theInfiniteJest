@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Dancing+Script&family=DotGothic16&family=Shippori+Mincho+B1&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="/stylesheets/eternity.css">
+    <title>THe Infinite Jest</title>
+</head>
+<body>
+
+<div class="headerBanner">
+    <h1><a id="headerTitle" href="/">THE INFINITE JEST</a></h1>
+    <p><span id="pastSpan">History</span><span id="presentSpan" class="activeTense">Radio</span><span id="futureSpan">Community</span></p>
+</div>
+
+<div class="box" id="systemDisplay">
+    <div class="column left"></div>
+    <div id="middleColumn" class="column middle text-center">
+
+        <div id="recommendationFrame">
+            <div class="iFrameContainer" id="mediaContainer">
+                <iframe id="presentPlayer" width="640" height="360"
+                src="https://www.youtube.com/embed/<%= youtubeID %>?start=<%=elapsedSeconds%>&autoplay=1&enablejsapi=1&mute=1"
+                style="border: solid 4px #37474F"
+                allow="autoplay"
+                allowFullScreen 
+                ></iframe>
+            </div>
+
+            <div id="reviewerRecommendationInformation">
+                <p><strong><span id="recommendationName"><%= recommendation.name %></span></strong></p>
+                <p><strong>Recommender: </strong><span id="recommenderName"><%= recommendation.recommenderName %></span></p>
+                <p><strong>Country: </strong><span id="userCountry"><%= recommendation.country %></span></p>
+                <p><strong>Why did you recommend this?: </strong><span id="recommendationDescription"><%= recommendation.description %></span></p>
+            </div>
+    
+            <div id="reviewerForm">
+                <form action="/reviewer" method="POST">
+                    <p>Does the recommendation work?:</p>
+
+                    <div>
+                        <input type="text" id="recommendationID" name="recommendationID" value="<%=recommendation.recommendationID%>" >
+                    </div>
+
+                    <div>
+                        <label for="yes">Yes. Send it to the future!</label>
+                        <input type="radio" id="yes" name="reviewerRadioBtn" value="true" >
+                    </div>
+
+                    <div>
+                        <label for="no">Nope. Send it to the void</label>
+                        <input type="radio" id="no" name="reviewerRadioBtn" value="false">
+                    </div>
+
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="column right"></div>
+</div>
+
+<div class="footer">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+</body>
+</html>

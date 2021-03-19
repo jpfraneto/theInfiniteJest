@@ -18,6 +18,40 @@ a {
     text-decoration: none;
 }
 
+.headerBanner span {
+    margin: 0 8px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.headerBanner span:hover {
+    text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.activeTense {
+    color: rgb(120, 59, 190) !important;
+}
+
+.userButtons {
+    background-color: black;
+    text-align: center;
+    flex: 0 1 auto;
+    color: rgba(177, 172, 172, 0.685);
+    text-decoration: none;
+}
+
+.userButtons span {
+    margin: 0 8px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.userButtons span:hover {
+    text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .headerBanner{
     font-family: 'Fredoka One', cursive;
     background-color: black;
@@ -29,17 +63,6 @@ a {
 #headerTitle {
     color: rgb(76, 12, 150);
     text-decoration: none;
-}
-
-#theFuture {
-    flex: 1 1 auto;
-    height: 100%;
-    color: white;
-    background-image: url("https://images.unsplash.com/photo-1462332420958-a05d1e002413?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1040&q=80");
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; 
-    text-align: center;
 }
 
 .box {
@@ -68,13 +91,11 @@ a {
 
 .footer a:hover {
     color: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
-    text-shadow: 0 0 20px #0ae678
+    text-shadow: 0 0 20px #0ae678;
 }
 
-.navigationBar {
-    width : 100%;
-    height: auto;
-    margin: 0 auto;
+#addRecommendationBtn:hover {
+    cursor: pointer;
 }
 
 #systemDisplay {
@@ -121,35 +142,19 @@ a {
     width:54%
 }
 
-.navigationBar span {
-    font-size: 150%;
-    margin: 0 auto;
-    font-family: 'Roboto', sans-serif;
-    color: rgba(177, 172, 172, 0.685)
-}
-
-.navigationBar span:hover {
-    text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.navigationBar p {
-    margin-bottom: 0;
-}
-
 #presentRecommendationInformation{
     color: white;
     display: none;
-    margin: 16px auto 55px;
+    margin: 16px auto 22px;
     padding: 8px 0;
-    border: rgb(76, 12, 150) groove 6px;
+    border: rgb(39, 95, 160) groove 6px;
 }
 
-.activeTense {
-    color: rgb(248, 239, 239) !important;
-    font-weight: bold;
-    font-size: 1.1em;
+#reviewerRecommendationInformation {
+    color: white;
+    margin: 16px auto;
+    padding: 8px 0;
+    border: rgb(39, 95, 160) groove 6px;
 }
 
 .table {
@@ -169,13 +174,46 @@ a:hover {
     color:white;
     margin: 16px auto 55px;
     padding: 8px 0;
-    border: rgb(76, 12, 150) groove 6px;
+    border: rgb(39, 95, 160) groove 6px;
 }
 
-#pastTable {
+#theFuture {
+    display: none;
+    color:white;
+    margin: 0 auto 55px;
+    padding: 8px 0;
+    border: rgb(39, 95, 160) groove 6px;
+}
+
+#theUser {
+    display: none;
+    color:white;
+    margin: 16px auto 55px;
+    padding: 8px 0;
+    border: rgb(39, 95, 160) groove 6px;
+}
+
+.systemTable {
     width: 100%;
     font-size: 0.618em;
     cursor: pointer;
+}
+
+.systemTable tr {
+    border-bottom: 0.1px dotted rgb(39, 95, 160);
+}
+
+.systemTable tr:hover {
+    color: black;
+    background-color: rgb(39, 95, 160);
+}
+
+#futureDiv {
+    display: none;
+}
+
+#userTable {
+    display: none;
 }
 
 .modal {
@@ -279,4 +317,114 @@ label {
     font-weight: bold;
     font-size: 1.5em;
     margin: 0;
+}
+
+#radioImage {
+    margin: 16px;
+    width: 300px;
+    height: auto;
+}
+
+#reviewerForm label {
+    margin-top: 0px;
+    display: inline-block;
+    text-align: center;
+    font-size: 1em;
+}
+
+#futureSpan a {
+    text-decoration: none;
+}
+
+#registerForm {
+    margin: 0 auto 12px auto;
+    padding: 8px 8px;
+    border: rgb(24, 71, 226) groove 6px;
+}
+
+.disclaimerDiv {
+    margin-bottom: 30px;
+}
+
+#loginDiv {
+    width: 359px;
+    margin: 1.6px auto;
+    padding: 0  8px;
+    border: rgb(24, 71, 226) groove 6px;
+    text-align: center;
+}
+
+label {
+    margin-top: 8px;
+    display: block;
+    text-align: left;
+    font-size: 0.8em;
+}
+
+#loginDiv input {
+    text-align: center;
+}
+
+.loginWelcome {
+    text-align: center;
+}
+
+.forgotPass {
+    display: block;
+    text-align: left;
+    font-size: 0.8em;
+    color: rgb(24, 71, 226);
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+.registerDiv {
+    margin: 0 auto;
+    width: 369px;
+}
+
+#registerIframe {
+    border: solid 2px black;
+    width: 100%;
+}
+
+#retrievePasswordForm {
+    padding: 0 auto;
+}
+
+#retrievePassDiv {
+    display: none;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+#loginDiv button {
+    margin: 6px auto 6px auto ;
+    display: block;
+}
+
+#getNewCode {
+    display: none;
+}
+
+#bioText {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.aboutText {
+    font-size: 0.8em;
+    color: rgb(219, 213, 213);
+}
+
+#registerIframe {
+    display: none;
 }

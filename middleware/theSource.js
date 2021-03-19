@@ -6,7 +6,6 @@ let seedDB        = require("../seeds2");
 let theSource = {};
 
 theSource.sendRecommendationToPast = () => {
-    // console.log("inside the sendRecommendationToPast function")
     Recommendation.findOne({status:'present'})
     .exec()
     .then( (presentRecommendation) => {
@@ -30,7 +29,6 @@ theSource.checkSystem = () => {
         if (presentRecommendation) {
             let now = (new Date).getTime();
             let timestampDifference = presentRecommendation.endingRecommendationTimestamp - now;
-            console.log(timestampDifference);
             if (timestampDifference >= 0) {
                 console.log("A setTimeout will start now and be triggered in " + timestampDifference/1000 + " seconds")
                 setTimeout(theSource.sendRecommendationToPast, timestampDifference)
@@ -45,8 +43,7 @@ theSource.checkSystem = () => {
 }
 
 theSource.theMind = () => {
-    // console.log("inside the the mind function")
-    Recommendation.find({}).exec()
+    Recommendation.find({reviewed:true}).exec()
     .then((allRecommendations)=>{
         let pastRecommendations = allRecommendations.filter(({status}) => "past".includes(status));
         let presentRecommendation = allRecommendations.filter(({status}) => "present".includes(status));
@@ -65,7 +62,6 @@ theSource.theMind = () => {
             .then(()=>{
                 console.log('The recommendation ' + newPresentRecommendation.name + ' was brought to the present, and the timeout will send this recommendation to the past in ' + newPresentRecommendation.duration/1000 + ' seconds');
                 setTimeout(theSource.sendRecommendationToPast, newPresentRecommendation.duration);
-                // setTimeout(theSource.sendRecommendationToPast, 1111);
             })
         } else {
             theSource.bigBang();
